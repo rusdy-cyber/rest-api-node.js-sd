@@ -1,19 +1,21 @@
 -------------------
 1. intsall node.js
 2. buka di visual studio code filenya
-3. ubah nama tabel pada user di file index.js
-4. buka xampp jalankan mysql,apache
+3. ubah nama tabel user  di file index.js
+4. ubah atau tambah nama tabel user di file models->user.js
+5. buka xampp jalankan mysql,apache
     ->buka php my admin
     ->buat database baru
     ->buat table baru sesuaikan dengan punya kalian tabel user dulu
-5. buka file .env
+6. jika ingin login menggunaan username dan passwod ubah di index.js dan routes->auth.js
+7. buka file .env
     ->ubah port sesuai yang kalian mau
     ->ubah database sesuai yang kalian buat
     ->ubah atau biarkan saja "JWT_SECRET" ini adalah token
-6. buka terminal di visual studio code
+8. buka terminal di visual studio code
     ->ketik "npm install" untuk install semua package
     ->ketik "npm run dev" untuk jalankan server atau node index.js
-7. buka postman 
+9. buka postman 
     -> http://localhost:8080/api/auth/register  "jika pakai port 8080, untuk register
         ->tambah "key=Content-Type, value=application/json" pada HEADER
         ->tambah "raw" pada BODY isinya :
