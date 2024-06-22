@@ -14,15 +14,15 @@ https://nodejs.org/en/
 6. jika ingin login menggunaan username dan passwod ubah di index.js dan routes->auth.js
 7. buka file .env
     ->ubah port sesuai yang kalian mau
-    ->ubah database sesuai yang kalian buat
+    ->ubah nama database sesuai yang kalian buat
     ->ubah atau biarkan saja "JWT_SECRET" ini adalah token
 8. buka terminal di visual studio code
     ->ketik "npm install" untuk install semua package
-    ->ketik "npm run dev" untuk jalankan server atau node index.js
+    ->ketik "npm run dev" untuk jalankan server atau "node index.js"
 9. buka postman 
     -> http://localhost:8080/api/auth/register  "jika pakai port 8080, untuk register
         ->tambah "key=Content-Type, value=application/json" pada HEADER
-        ->tambah "raw" pada BODY isinya :
+        ->tambah "raw" pada BODY isinya contoh :
         ```
         {
             "username": "admin",
@@ -37,7 +37,7 @@ https://nodejs.org/en/
     coba send
     -> http://localhost:8080/api/auth/login  "jika pakai port 8080 untuk login
         ->tambah "key=Content-Type, value=application/json" pada HEADER
-        ->tambah "raw" pada BODY isinya :
+        ->tambah "raw" pada BODY isinya contoh :
         ```
         {
             "email": "admin2@gmail.com",
