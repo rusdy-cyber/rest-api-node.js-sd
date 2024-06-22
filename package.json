@@ -1,5 +1,5 @@
 {
-  "name": "node-express-api",
+  "name": "nodeexpressapi",
   "description": "Simple api sample in Node",
   "version": "1.0.0",
   "private": true,
@@ -23,4 +23,5 @@
   "devDependencies": {
     "nodemon": "^3.0.1"
   }
+  
 }
