@@ -42,7 +42,7 @@ app.post('/api/auth/login', async (req, res) => {
         const [users] = await db.query('SELECT * FROM users WHERE email = ?', [email]);
 
         if (users.length === 0) {
-            return res.status(400).json({ msg: 'Invalid email' });
+            return res.status(400).json({ msg: 'Invalid email tidak ada' });
         }
 
         const user = users[0];
@@ -50,23 +50,14 @@ app.post('/api/auth/login', async (req, res) => {
         const isMatch = await bcrypt.compare(password, user.password);
 
         if (!isMatch) {
-            return res.status(400).json({ msg: 'Invalid username or password' });
+            return res.status(400).json({ msg: 'Invalid username pasword tidak ada' });
         }
 
         const payload = { user: { id: user.id } };
 
         const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-        res.json({
-            token,
-            user: {
-                username: user.username,
-                nama: user.nama,
-                sebagai: user.sebagai,
-                email: user.email,
-                departemen: user.departemen
-            }
-        });
+        res.json({ token });
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Server error');
